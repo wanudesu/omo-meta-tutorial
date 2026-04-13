@@ -21,6 +21,13 @@ export default function WhatIsSection() {
           </p>
         </div>
 
+        <div className="mb-12 p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
+          <h3 className="text-xl font-medium mb-4">{t.whatIs.overview.title}</h3>
+          <p className="text-zinc-400 leading-relaxed">
+            {t.whatIs.overview.description}
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
             <div className="flex items-center gap-3 mb-4">

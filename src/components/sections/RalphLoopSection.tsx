@@ -25,12 +25,11 @@ export default function RalphLoopSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-accent">Feature 04</span>
-            <div className="h-px w-12 bg-border" />
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
+            <span className="text-2xl">{t.ralphLoop.icon}</span>
+            <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
             {t.ralphLoop.title} <span className="text-accent">{t.ralphLoop.titleAccent}</span>
           </h2>
+          </div>
         </div>
 
         <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-12">

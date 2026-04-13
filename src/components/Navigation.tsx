@@ -7,11 +7,15 @@ export default function Navigation() {
   const { t, lang, setLang } = useI18n();
 
   const sections = [
+    { id: "getting-started", label: t.nav.gettingStarted },
     { id: "what-is", label: t.nav.whatIs },
+    { id: "opencode", label: t.nav.openCode },
+    { id: "omo", label: t.nav.omo },
     { id: "ultrawork", label: t.nav.ultrawork },
     { id: "agents", label: t.nav.agents },
-    { id: "hash-anchor", label: t.nav.hashAnchor },
-    { id: "ralph-loop", label: t.nav.ralphLoop },
+    { id: "commands", label: t.nav.commands },
+    { id: "faq", label: t.nav.faq },
+    { id: "tips", label: t.nav.tips },
   ];
 
   return (
@@ -23,7 +27,7 @@ export default function Navigation() {
               omo<span className="text-accent">.</span>
             </span>
             <span className="text-xs text-text-muted group-hover:text-text-secondary transition-colors">
-              {t.nav.tutorial}
+              {t.hero.subtitle}
             </span>
           </Link>
 

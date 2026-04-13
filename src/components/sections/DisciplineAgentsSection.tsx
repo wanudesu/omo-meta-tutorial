@@ -19,15 +19,7 @@ export default function DisciplineAgentsSection() {
         { name: "Assessment", desc: t.agents.sisyphus.phases.assessment },
         { name: "Orchestration", desc: t.agents.sisyphus.phases.orchestration },
       ],
-      code: `// Sisyphus is your main orchestrator
-// Type your request naturally - he figures out the rest
-
-ulw Implement user authentication with JWT
-// Sisyphus will:
-// 1. Explore codebase patterns
-// 2. Create a detailed plan
-// 3. Delegate to specialists
-// 4. Verify everything works`,
+      code: t.agents.sisyphus.example,
     },
     {
       id: "hephaestus",
@@ -42,15 +34,7 @@ ulw Implement user authentication with JWT
         { name: "Execute", desc: t.agents.hephaestus.phases.execute },
         { name: "Verify", desc: t.agents.hephaestus.phases.verify },
       ],
-      code: `// Hephaestus = autonomous deep work
-// Best for: complex refactoring, architecture decisions
-
-/hephaestus Rewrite the data layer to use Drizzle ORM
-// He will:
-// - Fire 5 explore agents simultaneously
-// - Analyze patterns across the codebase
-// - Create an execution plan
-// - Complete the task end-to-end`,
+      code: t.agents.hephaestus.example,
     },
     {
       id: "prometheus",
@@ -65,16 +49,7 @@ ulw Implement user authentication with JWT
         { name: "Momus", desc: t.agents.prometheus.phases.momus },
         { name: "Output", desc: t.agents.prometheus.phases.output },
       ],
-      code: `// Prometheus = planning mode
-// Best for: large features, uncertain scope
-
-/prometheus Build a real-time chat system
-// He will:
-// 1. Ask clarifying questions
-// 2. Explore your codebase
-// 3. Run gap analysis (Metis)
-// 4. Validate with Momus
-// 5. Output detailed execution plan`,
+      code: t.agents.prometheus.example,
     },
   ];
 
@@ -110,19 +85,20 @@ ulw Implement user authentication with JWT
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-accent">Feature 02</span>
-            <div className="h-px w-12 bg-border" />
+            <span className="text-2xl">{t.agents.icon}</span>
+            <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
+              {t.agents.title} <span className="text-accent">{t.agents.titleAccent}</span>
+            </h2>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
-            {t.agents.title} <span className="text-accent">{t.agents.titleAccent}</span>
-          </h2>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-4">
+            {t.agents.subtitle}
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-4">
+            {t.agents.description}
+            <br />
+            <span className="text-text-muted">{t.agents.description2}</span>
+          </p>
         </div>
-
-        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-16">
-          {t.agents.description}
-          <br />
-          <span className="text-text-muted">{t.agents.description2}</span>
-        </p>
 
         <div className="space-y-16">
           {agents.map((agent) => {
@@ -147,6 +123,10 @@ ulw Implement user authentication with JWT
                     <span className="text-text-secondary"> — </span>
                     <span className="text-text-secondary">{agent.concept}</span>
                   </p>
+                </div>
+
+                <div className="p-4 rounded-lg border border-zinc-800 bg-zinc-900/30 mb-4">
+                  <p className={`text-sm font-medium ${colors.text}`}>{t.agents.sisyphus.whenToUse}</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">

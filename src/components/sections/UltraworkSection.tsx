@@ -21,27 +21,34 @@ export default function UltraworkSection() {
   ];
 
   return (
-    <section id="ultrawork" className="py-24">
+    <section id="ultrawork" className="py-24 border-t border-zinc-800/50">
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-accent">Feature 01</span>
-            <div className="h-px w-12 bg-border" />
+            <span className="text-2xl">{t.ultrawork.icon}</span>
+            <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
+              {t.ultrawork.title}
+              <span className="text-accent"> / </span>
+              <span className="text-text-secondary">ulw</span>
+            </h2>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
-            {t.ultrawork.title}
-            <span className="text-accent"> / </span>
-            <span className="text-text-secondary">ulw</span>
-          </h2>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-4">
+            {t.ultrawork.subtitle}
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
+            {t.ultrawork.description}
+            <br />
+            <span className="text-text-muted">{t.ultrawork.description2}</span>
+          </p>
         </div>
 
-        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-12">
-          {t.ultrawork.description}
-          <br />
-          <span className="text-text-muted">{t.ultrawork.description2}</span>
-        </p>
+        <div className="mb-12 p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
+          <h3 className="text-xl font-medium mb-4">{t.ultrawork.whatIs.title}</h3>
+          <p className="text-zinc-400 leading-relaxed">{t.ultrawork.whatIs.description}</p>
+        </div>
 
-        <div className="mb-16">
+        <div className="mb-12">
+          <h3 className="text-xl font-medium mb-6">{t.ultrawork.usage}</h3>
           <CodeBlock
             language="bash"
             code={`# Activate ultrawork mode
@@ -83,16 +90,22 @@ ultrawork Migrate auth from OAuth2 to OIDC`}
           </div>
         </div>
 
-        <div className="p-6 rounded-xl border border-border bg-bg-card">
+        <div className="p-6 rounded-xl border border-border bg-bg-card mb-12">
           <div className="flex items-start gap-4">
             <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
               <div className="w-2 h-2 rounded-full bg-accent" />
             </div>
             <div>
               <h4 className="font-medium mb-2">{t.ultrawork.keyDiff.title}</h4>
-              <p className="text-text-secondary text-sm" dangerouslySetInnerHTML={{ __html: t.ultrawork.keyDiff.desc }} />
+              <p className="text-text-secondary text-sm">{t.ultrawork.keyDiff.desc}</p>
             </div>
           </div>
+        </div>
+
+        <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
+          <h4 className="font-medium mb-2">{t.ultrawork.whenToUse.title}</h4>
+          <p className="text-emerald-400 text-sm mb-2">✓ {t.ultrawork.whenToUse.good}</p>
+          <p className="text-amber-400 text-sm">✗ {t.ultrawork.whenToUse.bad}</p>
         </div>
       </div>
     </section>

@@ -1,17 +1,26 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import Navigation from "@/components/Navigation";
+import GettingStartedSection from "@/components/sections/GettingStartedSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
+import OpenCodeDeepSection from "@/components/sections/OpenCodeDeepSection";
+import OmoDeepSection from "@/components/sections/OmoDeepSection";
+import QuickExamplesSection from "@/components/sections/QuickExamplesSection";
 import UltraworkSection from "@/components/sections/UltraworkSection";
 import DisciplineAgentsSection from "@/components/sections/DisciplineAgentsSection";
 import HashAnchorSection from "@/components/sections/HashAnchorSection";
 import RalphLoopSection from "@/components/sections/RalphLoopSection";
+import CommandReferenceSection from "@/components/sections/CommandReferenceSection";
+import FAQSection from "@/components/sections/FAQSection";
+import TipsSection from "@/components/sections/TipsSection";
 
 export default function Home() {
   const { t } = useI18n();
 
   return (
     <div className="min-h-screen">
+      <Navigation />
       <div className="gradient-hero">
         <div className="max-w-5xl mx-auto px-6 py-24">
           <div className="mb-8">
@@ -49,11 +58,18 @@ export default function Home() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6">
+        <GettingStartedSection />
         <WhatIsSection />
+        <OpenCodeDeepSection />
+        <OmoDeepSection />
+        <QuickExamplesSection />
         <UltraworkSection />
         <DisciplineAgentsSection />
         <HashAnchorSection />
         <RalphLoopSection />
+        <CommandReferenceSection />
+        <FAQSection />
+        <TipsSection />
       </div>
     </div>
   );
