@@ -3,22 +3,11 @@
 import { useI18n } from "@/i18n";
 import CodeBlock from "../CodeBlock";
 
+const STEP_KEYS = ["start", "work", "persist", "check", "complete"] as const;
+const SCENARIO_COMMANDS = ["/ralph-loop", "/ulw-loop", "/ulw-loop"] as const;
+
 export default function RalphLoopSection() {
   const { t } = useI18n();
-
-  const steps = [
-    { num: "1", title: t.ralphLoop.steps.start.title, desc: t.ralphLoop.steps.start.desc },
-    { num: "2", title: t.ralphLoop.steps.work.title, desc: t.ralphLoop.steps.work.desc },
-    { num: "3", title: t.ralphLoop.steps.persist.title, desc: t.ralphLoop.steps.persist.desc },
-    { num: "4", title: t.ralphLoop.steps.check.title, desc: t.ralphLoop.steps.check.desc },
-    { num: "✓", title: t.ralphLoop.steps.complete.title, desc: t.ralphLoop.steps.complete.desc, isComplete: true },
-  ];
-
-  const scenarios = [
-    { scenario: t.ralphLoop.table.scenario1, command: "/ralph-loop" },
-    { scenario: t.ralphLoop.table.scenario2, command: "/ulw-loop" },
-    { scenario: t.ralphLoop.table.scenario3, command: "/ulw-loop" },
-  ];
 
   return (
     <section id="ralph-loop" className="py-24 border-t border-border">
@@ -28,16 +17,21 @@ export default function RalphLoopSection() {
             <span className="text-2xl">{t.ralphLoop.icon}</span>
             <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
             {t.ralphLoop.title} <span className="text-accent">{t.ralphLoop.titleAccent}</span>
-          </h2>
+            </h2>
           </div>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-4">
+            {t.ralphLoop.description}
+          </p>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
+            <span className="text-text-muted">{t.ralphLoop.description2}</span>
+            <code className="text-accent ml-2">{t.ralphLoop.done}</code>
+          </p>
         </div>
 
-        <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mb-12">
-          {t.ralphLoop.description}
-          <br />
-          <span className="text-text-muted">{t.ralphLoop.description2} </span>
-          <code className="text-accent">{t.ralphLoop.done}</code>.
-        </p>
+        <div className="mb-12 p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
+          <h3 className="text-xl font-medium mb-4">{t.ralphLoop.whatIs.title}</h3>
+          <p className="text-zinc-400 leading-relaxed">{t.ralphLoop.whatIs.description}</p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="p-6 rounded-xl border border-border bg-bg-card">
@@ -45,7 +39,7 @@ export default function RalphLoopSection() {
               <div className="w-8 h-8 rounded-lg border border-border flex items-center justify-center">
                 <span className="text-xs font-mono text-text-muted">01</span>
               </div>
-              <h3 className="text-lg font-medium">/ralph-loop</h3>
+              <h3 className="text-lg font-medium">{t.ralphLoop.ralphLoop}</h3>
             </div>
             <p className="text-text-secondary text-sm mb-4">{t.ralphLoop.ralphLoopDesc}</p>
             <CodeBlock
@@ -62,10 +56,7 @@ export default function RalphLoopSection() {
                 <span className="text-xs font-mono text-accent">02</span>
               </div>
               <h3 className="text-lg font-medium">
-                /ulw-loop{" "}
-                <span className="text-xs text-accent uppercase">
-                  ({t.ralphLoop.ulwLoop})
-                </span>
+                {t.ralphLoop.ulwLoop}
               </h3>
             </div>
             <p className="text-text-secondary text-sm mb-4">{t.ralphLoop.ulwLoopDesc}</p>
@@ -82,23 +73,27 @@ export default function RalphLoopSection() {
           <h3 className="text-xl font-medium mb-6">{t.ralphLoop.howItWorks}</h3>
           <div className="p-6 rounded-xl border border-border bg-bg-card">
             <div className="space-y-6">
-              {steps.map((step) => (
-                <div key={step.num} className="flex gap-4">
-                  <div
-                    className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
-                      step.isComplete
-                        ? "bg-emerald-500/20 text-emerald-400"
-                        : "bg-accent/20 text-accent"
-                    }`}
-                  >
-                    {step.num}
+              {STEP_KEYS.map((stepKey, index) => {
+                const step = t.ralphLoop.steps[stepKey as keyof typeof t.ralphLoop.steps];
+                const isComplete = stepKey === "complete";
+                return (
+                  <div key={stepKey} className="flex gap-4">
+                    <div
+                      className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+                        isComplete
+                          ? "bg-emerald-500/20 text-emerald-400"
+                          : "bg-accent/20 text-accent"
+                      }`}
+                    >
+                      {isComplete ? "✓" : String(index + 1)}
+                    </div>
+                    <div>
+                      <h4 className="font-medium">{step.title}</h4>
+                      <p className="text-text-secondary text-sm">{step.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-medium">{step.title}</h4>
-                    <p className="text-text-secondary text-sm" dangerouslySetInnerHTML={{ __html: step.desc }} />
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -110,13 +105,12 @@ export default function RalphLoopSection() {
             code={`// oh-my-openagent.jsonc
 {
   "ralph_loop": {
-    "max_iterations": 100,        // Max loop iterations
-    "completion_promise": "DONE",  // When to stop
-    "debounce_ms": 2000,           // Delay between checks
-    "persist_state": true          // Save .ralph-loop.json
+    "max_iterations": 100,
+    "completion_promise": "DONE",
+    "debounce_ms": 2000,
+    "persist_state": true
   },
   
-  // ulw-loop adds ultrawork mode
   "ultrawork": {
     "aggressive_parallel": true,
     "deep_research": true
@@ -126,7 +120,7 @@ export default function RalphLoopSection() {
           />
         </div>
 
-        <div className="p-6 rounded-xl border border-border bg-bg-card">
+        <div className="p-6 rounded-xl border border-border bg-bg-card mb-12">
           <h4 className="font-medium mb-4">{t.ralphLoop.whenToUse}</h4>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -137,21 +131,26 @@ export default function RalphLoopSection() {
                 </tr>
               </thead>
               <tbody className="text-text-secondary">
-                {scenarios.map((row, i) => (
-                  <tr key={i} className="border-b border-border-subtle">
-                    <td className="py-3">{row.scenario}</td>
-                    <td className="py-3">
-                      <code className="text-accent">{row.command}</code>
-                    </td>
-                  </tr>
-                ))}
+                {STEP_KEYS.slice(0, 3).map((scenarioKey, i) => {
+                  const scenarioKeyName = ["scenario1", "scenario2", "scenario3"][i] as "scenario1" | "scenario2" | "scenario3";
+                  return (
+                    <tr key={scenarioKey} className="border-b border-border-subtle">
+                      <td className="py-3">{t.ralphLoop.table[scenarioKeyName]}</td>
+                      <td className="py-3">
+                        <code className="text-accent">{SCENARIO_COMMANDS[i]}</code>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
         </div>
 
         <div className="mt-6 p-4 rounded-lg border border-border bg-bg-secondary">
-          <p className="text-sm text-text-secondary" dangerouslySetInnerHTML={{ __html: t.ralphLoop.proTip }} />
+          <p className="text-sm text-text-secondary">
+            <span className="text-accent">💡</span> {t.ralphLoop.proTip}
+          </p>
         </div>
       </div>
     </section>

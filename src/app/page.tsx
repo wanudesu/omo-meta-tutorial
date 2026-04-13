@@ -1,7 +1,6 @@
 "use client";
 
 import { useI18n } from "@/i18n";
-import Navigation from "@/components/Navigation";
 import GettingStartedSection from "@/components/sections/GettingStartedSection";
 import WhatIsSection from "@/components/sections/WhatIsSection";
 import OpenCodeDeepSection from "@/components/sections/OpenCodeDeepSection";
@@ -20,7 +19,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
       <div className="gradient-hero">
         <div className="max-w-5xl mx-auto px-6 py-24">
           <div className="mb-8">

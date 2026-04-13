@@ -3,22 +3,11 @@
 import { useI18n } from "@/i18n";
 import CodeBlock from "../CodeBlock";
 
+const FEATURE_KEYS = ["autoPlanning", "deepResearch", "aggressiveParallel", "selfCorrection"] as const;
+const FLOW_KEYS = ["intentGate", "assessment", "orchestrate", "verify"] as const;
+
 export default function UltraworkSection() {
   const { t } = useI18n();
-
-  const features = [
-    { title: t.ultrawork.features.autoPlanning.title, description: t.ultrawork.features.autoPlanning.desc },
-    { title: t.ultrawork.features.deepResearch.title, description: t.ultrawork.features.deepResearch.desc },
-    { title: t.ultrawork.features.aggressiveParallel.title, description: t.ultrawork.features.aggressiveParallel.desc },
-    { title: t.ultrawork.features.selfCorrection.title, description: t.ultrawork.features.selfCorrection.desc },
-  ];
-
-  const flowSteps = [
-    { phase: "01", title: t.ultrawork.phases.intentGate.title, desc: t.ultrawork.phases.intentGate.desc },
-    { phase: "02", title: t.ultrawork.phases.assessment.title, desc: t.ultrawork.phases.assessment.desc },
-    { phase: "03", title: t.ultrawork.phases.orchestrate.title, desc: t.ultrawork.phases.orchestrate.desc },
-    { phase: "04", title: t.ultrawork.phases.verify.title, desc: t.ultrawork.phases.verify.desc },
-  ];
 
   return (
     <section id="ultrawork" className="py-24 border-t border-zinc-800/50">
@@ -61,15 +50,18 @@ ultrawork Migrate auth from OAuth2 to OIDC`}
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-16 stagger-children">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="p-6 rounded-xl border border-border bg-bg-card hover:border-accent/30 transition-colors"
-            >
-              <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
-              <p className="text-text-secondary text-sm">{feature.description}</p>
-            </div>
-          ))}
+          {FEATURE_KEYS.map((key) => {
+            const feature = t.ultrawork.features[key];
+            return (
+              <div
+                key={key}
+                className="p-6 rounded-xl border border-border bg-bg-card hover:border-accent/30 transition-colors"
+              >
+                <h3 className="text-lg font-medium mb-2">{feature.title}</h3>
+                <p className="text-text-secondary text-sm">{feature.desc}</p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="mb-16">
@@ -77,15 +69,18 @@ ultrawork Migrate auth from OAuth2 to OIDC`}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent rounded-3xl" />
             <div className="relative grid grid-cols-2 md:grid-cols-4 gap-4">
-              {flowSteps.map((step) => (
-                <div key={step.phase} className="text-center">
-                  <div className="text-4xl font-bold text-accent/20 mb-2">
-                    {step.phase}
+              {FLOW_KEYS.map((key, index) => {
+                const phase = t.ultrawork.phases[key];
+                return (
+                  <div key={key} className="text-center">
+                    <div className="text-4xl font-bold text-accent/20 mb-2">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="text-sm font-medium">{phase.title}</div>
+                    <div className="text-xs text-text-muted mt-1">{phase.desc}</div>
                   </div>
-                  <div className="text-sm font-medium">{step.title}</div>
-                  <div className="text-xs text-text-muted mt-1">{step.desc}</div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
