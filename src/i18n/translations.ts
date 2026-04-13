@@ -1,10 +1,10 @@
 export const translations = {
   ko: {
     nav: {
-      whatIs: "개요",
+      whatIs: "기본 개념",
       ultrawork: "ultrawork / ulw",
-      agents: "Discipline Agents",
-      hashAnchor: "Hash-Anchored Edit",
+      agents: "에이전트",
+      hashAnchor: "정밀 편집",
       ralphLoop: "Ralph Loop",
       tutorial: "튜토리얼",
     },
@@ -13,239 +13,259 @@ export const translations = {
       title: "oh-my-openagent",
       subtitle: "튜토리얼",
       description:
-        "OpenCode 위에서 동작하는 멀티 에이전트 플러그인. AI 팀을 한 단어로 지휘하세요.",
-      descriptionJp: "ulw — 자동 계획, 심층 연구, 자기 수정 루프.",
+        "OpenCode에서 사용할 수 있는 멀티 에이전트 플러그인입니다. 한 번 지시하면 에이전트 팀이 함께 움직입니다.",
+      descriptionJp: "ulw — 계획, 조사, 검증을 한 번에.",
       github: "GitHub",
       getStarted: "시작하기",
     },
     whatIs: {
       icon: "📚",
       title: "Oh-My-OpenAgent란?",
-      subtitle: "기능을 살펴보기 전에 먼저 기본 개념을 이해해보세요.",
+      subtitle: "기능을 보기 전에 먼저 큰 흐름부터 가볍게 살펴보세요.",
       opencode: {
         icon: "🔧",
         title: "OpenCode",
         description:
-          "코드를 작성하고, 수정하고, 이해하는 데 도움을 주는 AI 기반 코드 에디터/CLI입니다.",
-        feature1: "코딩을 위한 AI 채팅 인터페이스를 제공합니다",
-        feature2: "파일 작업을 위한 내장 도구를 제공합니다",
-        feature3: "플러그인과 스킬로 확장할 수 있습니다",
+          "코드를 쓰고, 고치고, 이해할 때 도움을 주는 AI 기반 코드 에디터이자 CLI입니다.",
+        feature1: "코딩용 AI 채팅 기능 제공",
+        feature2: "파일 작업용 도구 내장",
+        feature3: "플러그인과 스킬로 확장 가능",
       },
       omo: {
         icon: "🚀",
         title: "Oh-My-OpenAgent (omo)",
         description:
-          "OpenCode에 멀티 에이전트 오케스트레이션을 추가해 주는 플러그인입니다.",
-        feature1:
-          "Discipline Agents(Sisyphus, Hephaestus, Prometheus)를 추가합니다",
-        feature2: "최대 생산성을 위한 ultrawork 모드를 제공합니다",
-        feature3: "자율 완료를 위한 자기 참조 Ralph Loop를 제공합니다",
+          "OpenCode에 여러 에이전트를 붙여 팀처럼 일하게 해주는 플러그인입니다.",
+        feature1: "Discipline Agents(Sisyphus, Hephaestus, Prometheus) 추가",
+        feature2: "더 강하게 작업하는 ultrawork 모드 제공",
+        feature3: "끝날 때까지 이어가는 Ralph Loop 제공",
       },
       howWorks: {
-        title: "함께 작동하는 방식",
+        title: "어떻게 같이 작동하나요?",
         step1: {
-          title: "omo 설치하기",
+          title: "omo 설치",
           description: "실행: bunx oh-my-openagent install",
         },
         step2: {
-          title: "자연스럽게 입력하기",
-          description: "원하는 작업을 일반적인 문장으로 설명하세요",
+          title: "평소처럼 입력",
+          description: "하고 싶은 일을 자연스럽게 적습니다",
         },
         step3: {
           title: "에이전트 협업",
-          description: "Sisyphus가 전문 에이전트들을 조율해 작업을 완료합니다",
+          description: "Sisyphus가 필요한 에이전트를 골라 작업을 진행합니다",
         },
         step4: {
-          title: "완료!",
-          description:
-            "에이전트 팀이 보고하기 전에 모든 것이 제대로 작동하는지 검증합니다",
+          title: "완료",
+          description: "결과를 보내기 전에 제대로 되는지 한 번 더 확인합니다",
         },
       },
       example: {
         title: "도입 전 vs 도입 후",
-        beforeLabel:
-          "omo 없이: AI가 코드를 주고, 나머지는 직접 처리해야 합니다",
-        afterLabel: "ulw 사용 시: 에이전트가 처음부터 끝까지 처리합니다",
+        beforeLabel: "omo 없이: 코드만 받고, 나머지는 직접 해야 함",
+        afterLabel: "ulw 사용: 에이전트가 처음부터 끝까지 처리",
         codeBefore: `# 일반 AI 어시스턴트
 "API에 사용자 인증을 추가해줘"
 
-# 결과: AI가 코드를 한 번에 제공합니다
-# → 디버깅, 테스트, 통합은 직접 해야 합니다`,
+# 결과: 코드만 바로 받아봄
+# → 디버깅, 테스트, 연결 작업은 직접 해야 함`,
         codeAfter: `# omo + ulw
 ulw API에 사용자 인증을 추가해줘
 
 # 결과:
-# - 패턴 분석
-# - 상세 계획 수립
+# - 기존 패턴 파악
+# - 작업 계획 정리
 # - 단계별 구현
 # - 테스트 작성
-# - 모든 하위 작업 완료 후 보고`,
+# - 모든 작업 확인 후 보고`,
       },
     },
     ultrawork: {
       title: "ultrawork",
       titleSlash: " / ulw",
-      description: "세 글자만 입력하고 떠나세요.",
-      description2: "최대 정밀도 모드. 한 단어로 모든 에이전트를 활성화합니다.",
+      description: "세 글자만 입력하면 됩니다.",
+      description2:
+        "고정밀 작업 모드입니다. 한 단어로 전체 에이전트 흐름이 켜집니다.",
       usage: "사용법",
       features: {
         autoPlanning: {
           title: "자동 계획",
-          desc: "Sisyphus가 코드를 작성하기 전에 상세한 작업 계획을 세웁니다",
+          desc: "Sisyphus가 코드를 쓰기 전에 먼저 작업 계획을 세웁니다",
         },
         deepResearch: {
-          title: "심층 연구",
-          desc: "코드베이스를 이해하기 위해 2~5개의 탐색 에이전트를 병렬로 실행합니다",
+          title: "심층 조사",
+          desc: "코드베이스를 파악하기 위해 2~5개의 탐색 에이전트를 병렬로 돌립니다",
         },
         aggressiveParallel: {
-          title: "공격적 병렬 처리",
-          desc: "최대 처리량을 위해 여러 에이전트를 동시에 실행합니다",
+          title: "병렬 작업",
+          desc: "여러 에이전트를 동시에 움직여 더 빠르게 처리합니다",
         },
         selfCorrection: {
-          title: "자기 수정",
-          desc: "출력을 검증하고 100% 완료될 때까지 반복합니다",
+          title: "자기 검증",
+          desc: "결과를 스스로 확인하고 끝날 때까지 계속 다듬습니다",
         },
       },
       howItWorks: "작동 방식",
       phases: {
         intentGate: {
-          title: "의도 파악",
-          desc: "사용자가 진짜로 의도한 바를 해석합니다",
+          title: "의도 확인",
+          desc: "입력한 말보다 실제로 원하는 작업을 먼저 파악합니다",
         },
-        assessment: { title: "평가", desc: "코드베이스의 패턴을 탐색합니다" },
+        assessment: {
+          title: "상태 파악",
+          desc: "코드베이스의 구조와 패턴을 살펴봅니다",
+        },
         orchestrate: {
-          title: "오케스트레이션",
-          desc: "전문 에이전트에게 작업을 분배합니다",
+          title: "작업 분배",
+          desc: "맞는 에이전트에게 일을 나눠 맡깁니다",
         },
-        verify: { title: "검증", desc: "완료될 때까지 스스로 수정합니다" },
+        verify: {
+          title: "검증",
+          desc: "문제가 없을 때까지 확인하고 고칩니다",
+        },
       },
       keyDiff: {
-        title: "핵심 차이점",
-        desc: "ulw는 최대 정밀도 모드를 활성화합니다. 자동 계획, 심층 연구, 병렬 에이전트, 자기 수정 루프를 모두 사용하며, 완료될 때까지 멈추지 않습니다.",
+        title: "핵심 차이",
+        desc: "ulw는 계획, 조사, 병렬 작업, 검증까지 한 흐름으로 처리합니다. 끝났다고 확인할 때까지 멈추지 않습니다.",
       },
     },
     agents: {
       title: "Discipline",
       titleAccent: "Agents",
-      description: "Sisyphus가 오케스트레이션하는 완전한 AI 개발 팀입니다.",
-      description2:
-        "각 에이전트는 고유한 전문성, 최적화된 모델, 그리고 명확한 역할을 가집니다.",
-      phases: "단계",
-      categoryRouting: "카테고리 라우팅",
+      description:
+        "Sisyphus가 여러 에이전트를 조율해 하나의 팀처럼 움직입니다.",
+      description2: "각 에이전트는 맡은 역할과 잘하는 일이 분명합니다.",
+      phases: "흐름",
+      categoryRouting: "작업 분류",
       sisyphus: {
         name: "Sisyphus",
         model: "claude-opus-4-6 / kimi-k2.5 / glm-5",
         role: "잠들지 않는 CTO",
         concept:
-          "숨은 요구사항을 파악하고, 코드베이스의 성숙도에 맞게 적응하며, 적절한 전문가에게 작업을 위임합니다.",
+          "숨은 요구를 파악하고, 코드베이스 상태에 맞게 판단한 뒤, 알맞은 전문가에게 일을 나눕니다.",
         phases: {
-          intentGate: "입력한 문장이 아니라, 실제 의도를 파악합니다",
-          assessment: "코드베이스의 정돈 수준을 평가합니다",
-          orchestration: "위임하고, 병렬화하고, 끝까지 밀어붙입니다",
+          intentGate: "입력한 문장보다 실제 목적을 먼저 읽습니다",
+          assessment: "코드베이스가 얼마나 정리되어 있는지 봅니다",
+          orchestration: "위임하고, 병렬로 돌리고, 끝까지 밀고 갑니다",
         },
       },
       hephaestus: {
         name: "Hephaestus",
         model: "gpt-5.4",
-        role: "정통 장인",
+        role: "실행 담당",
         concept:
-          "목표 중심의 자율 작업자입니다. 레시피가 아니라 목표를 주세요. 코드를 작성하기 전에 2~5개의 탐색 에이전트를 병렬로 실행합니다.",
+          "목표를 받아 실제로 움직이는 작업자입니다. 레시피보다 목표를 주면, 먼저 탐색하고 그다음 구현합니다.",
         phases: {
-          explore: "병렬 에이전트로 지형을 파악합니다",
-          plan: "진행 경로를 설계합니다",
-          execute: "정밀하게 구현합니다",
-          verify: "실제로 작동하는지 증명합니다",
+          explore: "병렬 에이전트로 먼저 살펴봅니다",
+          plan: "진행 방향을 정리합니다",
+          execute: "정확하게 구현합니다",
+          verify: "실제로 되는지 확인합니다",
         },
       },
       prometheus: {
         name: "Prometheus",
         model: "claude-opus-4-6 / kimi-k2.5 / glm-5",
-        role: "아키텍트",
+        role: "설계 담당",
         concept:
-          "인터뷰 모드를 갖춘 전략형 플래너입니다. 코드 한 줄을 건드리기 전에 상세한 실행 계획을 세웁니다.",
+          "바로 코드를 쓰기보다 먼저 질문하고, 범위를 정리하고, 자세한 실행 계획을 세웁니다.",
         phases: {
-          interview: "질문하며 범위를 파악합니다",
-          metis: "모호한 부분을 짚어냅니다",
-          momus: "가차 없이 검증합니다",
-          output: "실행 준비가 끝난 계획을 제시합니다",
+          interview: "질문으로 범위를 확인합니다",
+          metis: "애매한 부분을 짚어냅니다",
+          momus: "계획을 꼼꼼하게 검토합니다",
+          output: "실행 가능한 계획으로 정리합니다",
         },
       },
       categories: {
         visual: {
           name: "visual-engineering",
-          desc: "프론트엔드, UI/UX, 스타일링",
+          desc: "프론트엔드, UI/UX, 스타일 작업",
         },
-        ultrabrain: { name: "ultrabrain", desc: "복잡한 로직, 아키텍처" },
-        quick: { name: "quick", desc: "단일 파일 수정" },
-        deep: { name: "deep", desc: "자율 연구" },
-        writing: { name: "writing", desc: "문서화, 글쓰기" },
-        git: { name: "git-master", desc: "원자적 커밋, 리베이스" },
+        ultrabrain: {
+          name: "ultrabrain",
+          desc: "복잡한 로직과 구조 설계",
+        },
+        quick: {
+          name: "quick",
+          desc: "작은 수정이나 단일 파일 작업",
+        },
+        deep: {
+          name: "deep",
+          desc: "깊이 있는 자율 조사",
+        },
+        writing: {
+          name: "writing",
+          desc: "문서 작성과 설명문 정리",
+        },
+        git: {
+          name: "git-master",
+          desc: "커밋 정리와 리베이스",
+        },
       },
     },
     hashAnchor: {
       title: "Hash-Anchored",
-      titleAccent: "Edit Tool",
-      description: "특정 줄과 문자 위치를 기준으로 정확하게 코드를 편집합니다.",
+      titleAccent: "Edit",
+      description:
+        "줄과 문자 위치를 기준으로 필요한 부분만 정확하게 수정합니다.",
       description2:
-        "이제 파일을 뒤질 필요 없습니다. 필요한 위치로 바로 이동하세요.",
+        "파일을 뒤질 필요 없이 원하는 위치로 바로 이동할 수 있습니다.",
       lspTools: "LSP 도구",
       astTools: "AST 도구",
-      realWorld: "실전 예시",
+      realWorld: "예시",
       whyHash: {
-        title: "왜 Hash-Anchored인가?",
+        title: "왜 쓰나요?",
         items: [
-          "대규모 코드베이스에서도 잘 작동합니다",
-          "언어를 이해합니다 (TypeScript, Python 등)",
-          "이름 변경도 안정적으로 처리할 수 있습니다",
+          "큰 코드베이스에서도 안정적으로 동작합니다",
+          "TypeScript, Python 같은 언어 구조를 이해합니다",
+          "이름 변경 같은 작업도 더 안전하게 처리합니다",
         ],
       },
       astVsGrep: {
-        title: "AST vs Grep",
+        title: "AST와 Grep 차이",
         items: [
           "코드 구조를 이해합니다",
-          "문자열이나 주석 안의 텍스트는 잘못 매칭하지 않습니다",
-          "리팩토링에 안전합니다",
+          "문자열이나 주석은 잘못 건드리지 않습니다",
+          "리팩토링할 때 더 안전합니다",
         ],
       },
       tools: {
         gotoDefinition: {
           name: "lsp_goto_definition",
-          desc: "심볼 정의로 이동합니다",
+          desc: "심볼이 정의된 위치로 이동합니다",
         },
         findReferences: {
           name: "lsp_find_references",
-          desc: "워크스페이스 전체에서 사용처를 찾습니다",
+          desc: "워크스페이스 전체에서 사용된 곳을 찾습니다",
         },
         rename: {
           name: "lsp_rename",
-          desc: "워크스페이스 전체에서 심볼 이름을 변경합니다",
+          desc: "워크스페이스 전체에서 이름을 바꿉니다",
         },
         symbols: {
           name: "lsp_symbols",
-          desc: "파일 또는 워크스페이스 심볼을 가져옵니다",
+          desc: "파일이나 워크스페이스의 심볼을 보여줍니다",
         },
         grepSearch: {
           name: "ast_grep_search",
-          desc: "AST를 인식하며 코드 패턴을 검색합니다",
+          desc: "코드 구조를 보면서 패턴을 찾습니다",
         },
         grepReplace: {
           name: "ast_grep_replace",
-          desc: "AST 수준의 정밀도로 패턴을 치환합니다",
+          desc: "코드 구조를 기준으로 정확하게 바꿉니다",
         },
       },
     },
     ralphLoop: {
       title: "Ralph",
       titleAccent: "Loop",
-      description: "자기 참조 루프. 100% 끝날 때까지 멈추지 않습니다.",
-      description2: "다음 문구를 출력할 때까지 자동으로 계속됩니다:",
+      description:
+        "스스로 확인하며 도는 루프입니다. 일이 끝날 때까지 계속됩니다.",
+      description2: "아래 단어가 나올 때까지 자동으로 이어집니다:",
       done: "DONE",
       ralphLoop: "기본 루프",
-      ralphLoopDesc:
-        "표준 자기 참조 루프입니다. 집중적인 점진 작업에 가장 적합합니다.",
-      ulwLoop: "갓 모드",
+      ralphLoopDesc: "한 번에 조금씩 진행하는 작업에 잘 맞습니다.",
+      ulwLoop: "강화 모드",
       ulwLoopDesc:
-        "Ralph Loop + Ultrawork 모드. 복잡한 작업에 최대 강도로 동작합니다.",
+        "Ralph Loop에 Ultrawork를 더한 방식입니다. 복잡한 작업을 강하게 밀어붙일 때 좋습니다.",
       howItWorks: "작동 방식",
       steps: {
         start: {
@@ -253,315 +273,342 @@ ulw API에 사용자 인증을 추가해줘
           desc: "/ralph-loop 또는 /ulw-loop로 작업을 시작합니다",
         },
         work: {
-          title: "에이전트 작업",
-          desc: "에이전트가 작업 일부를 수행하고 진행 상황을 출력합니다",
+          title: "작업 진행",
+          desc: "에이전트가 작업을 처리하고 현재 진행 상황을 남깁니다",
         },
         persist: {
           title: "상태 저장",
-          desc: "상태가 .ralph-loop.json에 저장됩니다",
+          desc: "상태를 .ralph-loop.json에 저장합니다",
         },
         check: {
           title: "확인 후 계속",
-          desc: "session.idle 시점에 DONE 약속을 확인합니다",
+          desc: "session.idle 시점에 DONE 여부를 확인합니다",
         },
         complete: {
           title: "완료",
-          desc: "DONE이 확인되면 루프를 정상 종료합니다",
+          desc: "DONE이 확인되면 루프를 마칩니다",
         },
       },
       configuration: "설정",
-      whenToUse: "언제 사용할까",
+      whenToUse: "언제 쓰면 좋을까",
       table: {
-        scenario1: "집중적이고 점진적인 작업",
-        scenario2: "복합적인 복잡한 작업",
-        scenario3: "범위가 불확실한 대규모 리팩토링",
+        scenario1: "집중해서 조금씩 진행하는 작업",
+        scenario2: "여러 요소가 얽힌 복잡한 작업",
+        scenario3: "범위가 아직 애매한 큰 리팩토링",
       },
       proTip:
-        "모든 하위 작업이 완료되었는지 확인한 뒤에만 보고하라고 요청 끝에 덧붙이세요. 그러면 너무 일찍 멈추는 일을 줄일 수 있습니다.",
+        "요청 끝에 '모든 하위 작업이 끝난 뒤에만 보고해줘'라고 적어두면 너무 빨리 멈추는 일을 줄일 수 있습니다.",
     },
     footer: {
       builtWith: "Built with",
     },
   },
+
   en: {
     nav: {
-      whatIs: "What is?",
+      whatIs: "Overview",
       ultrawork: "ultrawork / ulw",
-      agents: "Discipline Agents",
-      hashAnchor: "Hash-Anchored Edit",
+      agents: "Agents",
+      hashAnchor: "Precise Editing",
       ralphLoop: "Ralph Loop",
-      tutorial: "tutorial",
+      tutorial: "Tutorial",
     },
     hero: {
       badge: "Interactive Guide",
       title: "oh-my-openagent",
       subtitle: "tutorial",
       description:
-        "A multi-agent plugin that runs on top of OpenCode. Command your AI team with a single word.",
-      descriptionJp:
-        "ulw — auto-planning, deep research, self-correction loops.",
+        "A multi-agent plugin for OpenCode. Give one prompt, and let the agent team handle the work.",
+      descriptionJp: "ulw — planning, research, and self-checking in one flow.",
       github: "GitHub",
       getStarted: "Get Started",
     },
     whatIs: {
       icon: "📚",
       title: "What is Oh-My-OpenAgent?",
-      subtitle: "Understand the basics before diving into features.",
+      subtitle:
+        "Start here for the quick version before you explore the features.",
       opencode: {
         icon: "🔧",
         title: "OpenCode",
         description:
-          "An AI-powered code editor/CLI that helps you write, edit, and understand code.",
-        feature1: "Provides AI chat interface for coding",
-        feature2: "Built-in tools for file operations",
-        feature3: "Extensible with plugins and skills",
+          "An AI coding editor and CLI that helps you write, edit, and understand code.",
+        feature1: "AI chat for coding",
+        feature2: "Built-in tools for file work",
+        feature3: "Plugin and skill support",
       },
       omo: {
         icon: "🚀",
         title: "Oh-My-OpenAgent (omo)",
         description:
-          "A plugin that adds multi-agent orchestration to OpenCode.",
+          "A plugin that lets multiple agents work together inside OpenCode.",
         feature1: "Adds Discipline Agents (Sisyphus, Hephaestus, Prometheus)",
-        feature2: "Enables ultrawork mode for maximum productivity",
-        feature3: "Self-referential Ralph Loop for autonomous completion",
+        feature2: "Adds ultrawork mode for heavier tasks",
+        feature3: "Adds Ralph Loop to keep going until the work is done",
       },
       howWorks: {
-        title: "How They Work Together",
+        title: "How does it work?",
         step1: {
           title: "Install omo",
           description: "Run: bunx oh-my-openagent install",
         },
         step2: {
           title: "Type naturally",
-          description: "Describe what you want in plain English",
+          description: "Describe what you want in plain language",
         },
         step3: {
-          title: "Agents collaborate",
+          title: "Agents work together",
           description:
-            "Sisyphus orchestrates specialized agents to complete your task",
+            "Sisyphus picks the right agents and coordinates the task",
         },
         step4: {
-          title: "Done!",
+          title: "Done",
           description:
-            "The agent team verifies everything works before reporting",
+            "Before reporting back, the agent team checks that everything works",
         },
       },
       example: {
         title: "Before vs After",
-        beforeLabel: "Without omo: AI gives you code, you do the rest",
-        afterLabel: "With ulw: Agents handle everything end-to-end",
-        codeBefore: `# Regular AI Assistant
+        beforeLabel: "Without omo: you get code, then finish the rest yourself",
+        afterLabel: "With ulw: the agents handle the full flow",
+        codeBefore: `# Standard AI assistant
 "Add user authentication to the API"
 
-# Result: AI gives you all the code
-# → You handle debugging, testing, integration`,
+# Result: you get a block of code
+# -> You still handle debugging, testing, and integration`,
         codeAfter: `# omo + ulw
 ulw Add user authentication to the API
 
 # Result:
-# - Pattern analysis
-# - Detailed plan creation
-# - Phased implementation
-# - Test creation
-# - Reports after all subtasks complete`,
+# - Understands existing patterns
+# - Makes a plan
+# - Builds it step by step
+# - Writes tests
+# - Reports back after everything is done`,
       },
     },
     ultrawork: {
       title: "ultrawork",
       titleSlash: " / ulw",
-      description: "Type three letters. Walk away.",
-      description2: "Maximum precision mode. One word activates every agent.",
+      description: "Type three letters and let it run.",
+      description2:
+        "High-precision mode. One word turns on the full agent flow.",
       usage: "Usage",
       features: {
         autoPlanning: {
-          title: "Auto-Planning",
-          desc: "Sisyphus creates detailed work plans before writing code",
+          title: "Auto Planning",
+          desc: "Sisyphus makes a plan before any code is written",
         },
         deepResearch: {
           title: "Deep Research",
-          desc: "Fires 2-5 parallel explore agents to understand the codebase",
+          desc: "Runs 2 to 5 explore agents in parallel to understand the codebase",
         },
         aggressiveParallel: {
-          title: "Aggressive Parallel",
-          desc: "Executes multiple agents simultaneously for maximum throughput",
+          title: "Parallel Execution",
+          desc: "Uses multiple agents at the same time to move faster",
         },
         selfCorrection: {
-          title: "Self-Correction",
-          desc: "Verifies output and loops until 100% complete",
+          title: "Self-Checking",
+          desc: "Reviews the result and keeps going until it is done",
         },
       },
       howItWorks: "How it works",
       phases: {
-        intentGate: { title: "Intent Gate", desc: "Parses what you meant" },
-        assessment: { title: "Assessment", desc: "Explores codebase patterns" },
-        orchestrate: { title: "Orchestrate", desc: "Delegates to specialists" },
-        verify: { title: "Verify", desc: "Self-corrects until done" },
+        intentGate: {
+          title: "Intent Check",
+          desc: "Figures out what you really want to do",
+        },
+        assessment: {
+          title: "Assessment",
+          desc: "Looks through the codebase and finds the patterns",
+        },
+        orchestrate: {
+          title: "Orchestration",
+          desc: "Hands work to the right specialists",
+        },
+        verify: {
+          title: "Verification",
+          desc: "Checks and fixes things until they are ready",
+        },
       },
       keyDiff: {
         title: "Key Difference",
-        desc: "ulw activates maximum precision: auto-planning, deep research, parallel agents, and self-correction loops. It doesn&apos;t stop until done.",
+        desc: "ulw handles planning, research, parallel work, and verification in one flow. It does not stop until the work is actually done.",
       },
     },
     agents: {
       title: "Discipline",
       titleAccent: "Agents",
-      description: "A full AI dev team orchestrated by Sisyphus.",
-      description2:
-        "Each agent has distinct expertise, optimized models, and clear responsibilities.",
-      phases: "Phases",
-      categoryRouting: "Category Routing",
+      description:
+        "Sisyphus coordinates multiple agents so they can work like one team.",
+      description2: "Each agent has a clear role and a specific strength.",
+      phases: "Flow",
+      categoryRouting: "Task Routing",
       sisyphus: {
         name: "Sisyphus",
         model: "claude-opus-4-6 / kimi-k2.5 / glm-5",
         role: "The CTO Who Never Sleeps",
         concept:
-          "Parses implicit requirements, adapts to codebase maturity, delegates to specialists.",
+          "Reads the hidden intent, checks the state of the codebase, and hands work to the right specialists.",
         phases: {
-          intentGate: "Parses what you meant, not just what you typed",
-          assessment: "Evaluates codebase discipline level",
-          orchestration: "Delegates, parallelizes, drives to completion",
+          intentGate: "Looks at the real goal, not just the exact wording",
+          assessment: "Checks how structured and clean the codebase is",
+          orchestration: "Delegates, parallelizes, and pushes the task forward",
         },
       },
       hephaestus: {
         name: "Hephaestus",
         model: "gpt-5.4",
-        role: "The Legitimate Craftsman",
+        role: "The Builder",
         concept:
-          "Goal-oriented autonomous worker. Give him a goal, not a recipe. Fires 2-5 parallel explore agents before writing code.",
+          "A goal-driven worker. Give it a goal, not a recipe. It explores first, then builds.",
         phases: {
-          explore: "Map the terrain with parallel agents",
-          plan: "Chart the course",
-          execute: "Build with precision",
-          verify: "Prove it works",
+          explore: "Maps the terrain with parallel agents",
+          plan: "Sets the direction",
+          execute: "Builds carefully",
+          verify: "Checks that it really works",
         },
       },
       prometheus: {
         name: "Prometheus",
         model: "claude-opus-4-6 / kimi-k2.5 / glm-5",
-        role: "The Architect",
+        role: "The Planner",
         concept:
-          "Strategic planner with interview mode. Creates detailed battle plans before a single line of code is touched.",
+          "Instead of jumping straight into code, it asks questions, defines the scope, and makes a detailed plan.",
         phases: {
-          interview: "Questions, identifies scope",
-          metis: "Catches ambiguities",
-          momus: "Validates ruthlessly",
-          output: "Battle-ready plan",
+          interview: "Asks questions and narrows the scope",
+          metis: "Finds the unclear parts",
+          momus: "Reviews the plan critically",
+          output: "Delivers a plan that is ready to use",
         },
       },
       categories: {
         visual: {
           name: "visual-engineering",
-          desc: "Frontend, UI/UX, styling",
+          desc: "Frontend, UI/UX, and styling work",
         },
-        ultrabrain: { name: "ultrabrain", desc: "Hard logic, architecture" },
-        quick: { name: "quick", desc: "Single-file changes" },
-        deep: { name: "deep", desc: "Autonomous research" },
-        writing: { name: "writing", desc: "Documentation, prose" },
-        git: { name: "git-master", desc: "Atomic commits, rebase" },
+        ultrabrain: {
+          name: "ultrabrain",
+          desc: "Complex logic and architecture",
+        },
+        quick: {
+          name: "quick",
+          desc: "Small edits or single-file tasks",
+        },
+        deep: {
+          name: "deep",
+          desc: "Deeper autonomous research",
+        },
+        writing: {
+          name: "writing",
+          desc: "Docs, copy, and written explanations",
+        },
+        git: {
+          name: "git-master",
+          desc: "Commits and rebases",
+        },
       },
     },
     hashAnchor: {
       title: "Hash-Anchored",
-      titleAccent: "Edit Tool",
-      description: "Precise code editing at specific line/character positions.",
+      titleAccent: "Edit",
+      description:
+        "Edits the exact part you need based on line and character position.",
       description2:
-        "No more searching through files. Jump directly to where you need.",
+        "You can jump straight to the right place without digging through files.",
       lspTools: "LSP Tools",
       astTools: "AST Tools",
-      realWorld: "Real-world Example",
+      realWorld: "Example",
       whyHash: {
-        title: "Why Hash-Anchored?",
+        title: "Why use it?",
         items: [
-          "Works across large codebases",
-          "Language-aware (TypeScript, Python, etc.)",
-          "Handles renaming with confidence",
+          "Works well even in large codebases",
+          "Understands languages like TypeScript and Python",
+          "Makes renaming and refactoring safer",
         ],
       },
       astVsGrep: {
         title: "AST vs Grep",
         items: [
-          "Understands code structure",
-          "Won&apos;t match inside strings/comments",
-          "Refactoring-safe",
+          "It understands code structure",
+          "It does not accidentally match strings or comments",
+          "It is safer for refactoring work",
         ],
       },
       tools: {
         gotoDefinition: {
           name: "lsp_goto_definition",
-          desc: "Jump to symbol definition",
+          desc: "Jumps to where a symbol is defined",
         },
         findReferences: {
           name: "lsp_find_references",
-          desc: "Find all usages across workspace",
+          desc: "Finds where a symbol is used across the workspace",
         },
         rename: {
           name: "lsp_rename",
-          desc: "Rename symbol across entire workspace",
+          desc: "Renames a symbol across the workspace",
         },
         symbols: {
           name: "lsp_symbols",
-          desc: "Get file/workspace symbols",
+          desc: "Shows symbols from a file or workspace",
         },
         grepSearch: {
           name: "ast_grep_search",
-          desc: "Search code patterns with AST awareness",
+          desc: "Searches patterns while understanding code structure",
         },
         grepReplace: {
           name: "ast_grep_replace",
-          desc: "Replace patterns with AST precision",
+          desc: "Replaces patterns with structure-aware precision",
         },
       },
     },
     ralphLoop: {
       title: "Ralph",
       titleAccent: "Loop",
-      description: "Self-referential loop. Doesn&apos;t stop until 100% done.",
-      description2: "Continues automatically until you output",
+      description:
+        "A self-checking loop that keeps going until the work is done.",
+      description2: "It keeps running until this word appears:",
       done: "DONE",
       ralphLoop: "Standard Loop",
-      ralphLoopDesc:
-        "Standard self-referential loop. Best for focused, incremental work.",
-      ulwLoop: "God Mode",
+      ralphLoopDesc: "Good for focused work that moves forward in small steps.",
+      ulwLoop: "Boosted Mode",
       ulwLoopDesc:
-        "Ralph Loop + Ultrawork mode. Maximum intensity for complex tasks.",
-      howItWorks: "How It Works",
+        "Ralph Loop plus Ultrawork. Best when the task is larger and more complex.",
+      howItWorks: "How it works",
       steps: {
         start: {
-          title: "Start Loop",
-          desc: "You start the loop with a task: /ralph-loop or /ulw-loop",
+          title: "Start",
+          desc: "Begin with /ralph-loop or /ulw-loop",
         },
         work: {
-          title: "Agent Works",
-          desc: "Agent completes a chunk of work and outputs its progress",
+          title: "Work",
+          desc: "The agent completes part of the task and leaves a progress update",
         },
         persist: {
-          title: "State Persisted",
-          desc: "State saved to .ralph-loop.json",
+          title: "Save State",
+          desc: "The current state is saved to .ralph-loop.json",
         },
         check: {
-          title: "Check & Continue",
-          desc: "On session.idle, checks for DONE promise",
+          title: "Check and Continue",
+          desc: "On session.idle, it checks whether DONE has been reached",
         },
         complete: {
-          title: "Complete",
-          desc: "DONE found → Exit loop gracefully",
+          title: "Finish",
+          desc: "Once DONE is found, the loop ends",
         },
       },
       configuration: "Configuration",
-      whenToUse: "When to Use Each",
+      whenToUse: "When to use it",
       table: {
-        scenario1: "Focused, incremental work",
-        scenario2: "Complex multi-faceted tasks",
-        scenario3: "Large refactoring with uncertain scope",
+        scenario1: "Focused work in small steps",
+        scenario2: "Complex work with multiple moving parts",
+        scenario3: "Large refactoring with unclear scope",
       },
       proTip:
-        "End your request with &quot;Report only after confirming all subtasks are complete.&quot; This prevents premature stopping.",
+        'Add "Report back only after all subtasks are done" to your prompt to reduce early stopping.',
     },
     footer: {
       builtWith: "Built with",
     },
   },
 };
-
-export type Language = "ko" | "en";
-export type TranslationKeys = typeof translations.en;
