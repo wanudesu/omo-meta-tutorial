@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import WhatIsSection from "@/components/sections/WhatIsSection";
 import UltraworkSection from "@/components/sections/UltraworkSection";
 import DisciplineAgentsSection from "@/components/sections/DisciplineAgentsSection";
 import HashAnchorSection from "@/components/sections/HashAnchorSection";
@@ -48,6 +49,7 @@ export default function Home() {
       </div>
 
       <div className="max-w-5xl mx-auto px-6">
+        <WhatIsSection />
         <UltraworkSection />
         <DisciplineAgentsSection />
         <HashAnchorSection />

@@ -7,6 +7,7 @@ export default function Navigation() {
   const { t, lang, setLang } = useI18n();
 
   const sections = [
+    { id: "what-is", label: t.nav.whatIs },
     { id: "ultrawork", label: t.nav.ultrawork },
     { id: "agents", label: t.nav.agents },
     { id: "hash-anchor", label: t.nav.hashAnchor },

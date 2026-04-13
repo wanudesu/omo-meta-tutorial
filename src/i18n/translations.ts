@@ -1,6 +1,7 @@
 export const translations = {
   ko: {
     nav: {
+      whatIs: "개요",
       ultrawork: "ultrawork / ulw",
       agents: "Discipline Agents",
       hashAnchor: "Hash-Anchored Edit",
@@ -12,10 +13,57 @@ export const translations = {
       title: "oh-my-openagent",
       subtitle: "튜토리얼",
       description:
-        "최고의 에이전트 하네스. 한 단어로 최대 정밀도 모드를 활성화합니다.",
+        "OpenCode 위에서 동작하는 멀티 에이전트 플러그인. AI 팀을 한 단어로 지휘하세요.",
       descriptionJp: "ulw — 자동 계획, 심층 연구, 자기 수정 루프.",
       github: "GitHub",
       getStarted: "시작하기",
+    },
+    whatIs: {
+      title: "Oh-My-OpenAgent란?",
+      subtitle: "기능을 살펴보기 전에 먼저 기본 개념을 이해해보세요.",
+      opencode: {
+        title: "OpenCode",
+        description:
+          "코드를 작성하고, 수정하고, 이해하는 데 도움을 주는 AI 기반 코드 에디터/CLI입니다.",
+        feature1: "코딩을 위한 AI 채팅 인터페이스를 제공합니다",
+        feature2: "파일 작업을 위한 내장 도구를 제공합니다",
+        feature3: "플러그인과 스킬로 확장할 수 있습니다",
+      },
+      omo: {
+        title: "Oh-My-OpenAgent (omo)",
+        description:
+          "OpenCode에 멀티 에이전트 오케스트레이션을 추가해 주는 플러그인입니다.",
+        feature1:
+          "Discipline Agents(Sisyphus, Hephaestus, Prometheus)를 추가합니다",
+        feature2: "최대 생산성을 위한 ultrawork 모드를 제공합니다",
+        feature3: "자율 완료를 위한 자기 참조 Ralph Loop를 제공합니다",
+      },
+      howWorks: {
+        title: "함께 작동하는 방식",
+        step1: {
+          title: "omo 설치하기",
+          description: "실행: bunx oh-my-openagent install",
+        },
+        step2: {
+          title: "자연스럽게 입력하기",
+          description: "원하는 작업을 일반적인 문장으로 설명하세요",
+        },
+        step3: {
+          title: "에이전트 협업",
+          description: "Sisyphus가 전문 에이전트들을 조율해 작업을 완료합니다",
+        },
+        step4: {
+          title: "완료!",
+          description:
+            "에이전트 팀이 보고하기 전에 모든 것이 제대로 작동하는지 검증합니다",
+        },
+      },
+      example: {
+        title: "도입 전 vs 도입 후",
+        beforeLabel:
+          "omo 없이: AI가 코드를 주고, 나머지는 직접 처리해야 합니다",
+        afterLabel: "ulw 사용 시: 에이전트가 처음부터 끝까지 전부 처리합니다",
+      },
     },
     ultrawork: {
       title: "ultrawork",
@@ -220,6 +268,7 @@ export const translations = {
   },
   en: {
     nav: {
+      whatIs: "What is?",
       ultrawork: "ultrawork / ulw",
       agents: "Discipline Agents",
       hashAnchor: "Hash-Anchored Edit",
@@ -231,11 +280,57 @@ export const translations = {
       title: "oh-my-openagent",
       subtitle: "tutorial",
       description:
-        "The best agent harness. One word to activate maximum precision.",
+        "A multi-agent plugin that runs on top of OpenCode. Command your AI team with a single word.",
       descriptionJp:
         "ulw — auto-planning, deep research, self-correction loops.",
       github: "GitHub",
       getStarted: "Get Started",
+    },
+    whatIs: {
+      title: "What is Oh-My-OpenAgent?",
+      subtitle: "Understand the basics before diving into features.",
+      opencode: {
+        title: "OpenCode",
+        description:
+          "An AI-powered code editor/CLI that helps you write, edit, and understand code.",
+        feature1: "Provides AI chat interface for coding",
+        feature2: "Built-in tools for file operations",
+        feature3: "Extensible with plugins and skills",
+      },
+      omo: {
+        title: "Oh-My-OpenAgent (omo)",
+        description:
+          "A plugin that adds multi-agent orchestration to OpenCode.",
+        feature1: "Adds Discipline Agents (Sisyphus, Hephaestus, Prometheus)",
+        feature2: "Enables ultrawork mode for maximum productivity",
+        feature3: "Self-referential Ralph Loop for autonomous completion",
+      },
+      howWorks: {
+        title: "How They Work Together",
+        step1: {
+          title: "Install omo",
+          description: "Run: bunx oh-my-openagent install",
+        },
+        step2: {
+          title: "Type naturally",
+          description: "Describe what you want in plain English",
+        },
+        step3: {
+          title: "Agents collaborate",
+          description:
+            "Sisyphus orchestrates specialized agents to complete your task",
+        },
+        step4: {
+          title: "Done!",
+          description:
+            "The agent team verifies everything works before reporting",
+        },
+      },
+      example: {
+        title: "Before vs After",
+        beforeLabel: "Without omo: AI gives you code, you do the rest",
+        afterLabel: "With ulw: Agents handle everything end-to-end",
+      },
     },
     ultrawork: {
       title: "ultrawork",
