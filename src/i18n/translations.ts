@@ -19,9 +19,11 @@ export const translations = {
       getStarted: "시작하기",
     },
     whatIs: {
+      icon: "📚",
       title: "Oh-My-OpenAgent란?",
       subtitle: "기능을 살펴보기 전에 먼저 기본 개념을 이해해보세요.",
       opencode: {
+        icon: "🔧",
         title: "OpenCode",
         description:
           "코드를 작성하고, 수정하고, 이해하는 데 도움을 주는 AI 기반 코드 에디터/CLI입니다.",
@@ -30,6 +32,7 @@ export const translations = {
         feature3: "플러그인과 스킬로 확장할 수 있습니다",
       },
       omo: {
+        icon: "🚀",
         title: "Oh-My-OpenAgent (omo)",
         description:
           "OpenCode에 멀티 에이전트 오케스트레이션을 추가해 주는 플러그인입니다.",
@@ -63,6 +66,20 @@ export const translations = {
         beforeLabel:
           "omo 없이: AI가 코드를 주고, 나머지는 직접 처리해야 합니다",
         afterLabel: "ulw 사용 시: 에이전트가 처음부터 끝까지 전부 처리합니다",
+        codeBefore: `# 일반 AI 어시스턴트
+"API에 사용자 인증을 추가해줘"
+
+# 결과: 코드를 한 번에 다 줌
+# → 디버깅, 테스트, 통합은 직접 해야 함`,
+        codeAfter: `# omo + ulw
+ulw API에 사용자 인증을 추가해줘
+
+# 결과:
+# - 패턴 분석
+# - 상세 계획 수립
+# -分段実装
+# - 테스트 작성
+# - 모든 하위 작업 완료 후 보고`,
       },
     },
     ultrawork: {
@@ -287,9 +304,11 @@ export const translations = {
       getStarted: "Get Started",
     },
     whatIs: {
+      icon: "📚",
       title: "What is Oh-My-OpenAgent?",
       subtitle: "Understand the basics before diving into features.",
       opencode: {
+        icon: "🔧",
         title: "OpenCode",
         description:
           "An AI-powered code editor/CLI that helps you write, edit, and understand code.",
@@ -298,6 +317,7 @@ export const translations = {
         feature3: "Extensible with plugins and skills",
       },
       omo: {
+        icon: "🚀",
         title: "Oh-My-OpenAgent (omo)",
         description:
           "A plugin that adds multi-agent orchestration to OpenCode.",
@@ -330,6 +350,20 @@ export const translations = {
         title: "Before vs After",
         beforeLabel: "Without omo: AI gives you code, you do the rest",
         afterLabel: "With ulw: Agents handle everything end-to-end",
+        codeBefore: `# Regular AI Assistant
+"Add user authentication to the API"
+
+# Result: AI gives you all the code
+# → You handle debugging, testing, integration`,
+        codeAfter: `# omo + ulw
+ulw Add user authentication to the API
+
+# Result:
+# - Pattern analysis
+# - Detailed plan creation
+# - Phased implementation
+# - Test creation
+# - Reports after all subtasks complete`,
       },
     },
     ultrawork: {

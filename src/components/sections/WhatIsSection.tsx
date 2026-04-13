@@ -11,7 +11,7 @@ export default function WhatIsSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">📚</span>
+            <span className="text-2xl">{t.whatIs.icon}</span>
             <h2 className="text-3xl font-semibold tracking-tight">
               {t.whatIs.title}
             </h2>
@@ -24,7 +24,7 @@ export default function WhatIsSection() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">🔧</span>
+              <span className="text-3xl">{t.whatIs.opencode.icon}</span>
               <h3 className="text-xl font-medium">{t.whatIs.opencode.title}</h3>
             </div>
             <p className="text-zinc-400 mb-4">{t.whatIs.opencode.description}</p>
@@ -46,7 +46,7 @@ export default function WhatIsSection() {
 
           <div className="p-6 rounded-xl border border-indigo-500/30 bg-indigo-500/5">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">🚀</span>
+              <span className="text-3xl">{t.whatIs.omo.icon}</span>
               <h3 className="text-xl font-medium">{t.whatIs.omo.title}</h3>
             </div>
             <p className="text-zinc-400 mb-4">{t.whatIs.omo.description}</p>
@@ -129,11 +129,7 @@ export default function WhatIsSection() {
               <p className="text-sm text-zinc-400 mb-3">{t.whatIs.example.beforeLabel}</p>
               <CodeBlock
                 language="bash"
-                code={`# 일반 AI 어시스턴트
-"API에 사용자 인증을 추가해줘"
-
-# 결과: 코드를 한 번에 다 줌
-# → 디버깅, 테스트, 통합은 직접 해야 함`}
+                code={t.whatIs.example.codeBefore}
                 filename="without-omo.sh"
               />
             </div>
@@ -141,15 +137,7 @@ export default function WhatIsSection() {
               <p className="text-sm text-zinc-400 mb-3">{t.whatIs.example.afterLabel}</p>
               <CodeBlock
                 language="bash"
-                code={`# omo + ulw
-ulw API에 사용자 인증을 추가해줘
-
-# 결과:
-# - 패턴 분석
-# - 상세 계획 수립
-# -分段実装
-# - 테스트 작성
-# - 모든 하위 작업 완료 후 보고`}
+                code={t.whatIs.example.codeAfter}
                 filename="with-omo.sh"
               />
             </div>
