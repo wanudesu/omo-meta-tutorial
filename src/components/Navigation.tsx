@@ -52,7 +52,7 @@ export default function Navigation() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="group">
-            <span className="text-lg font-semibold tracking-tight text-text-secondary group-hover:text-text-primary transition-colors">
+            <span className="text-lg font-semibold tracking-tight text-text-primary group-hover:scale-105 transition-transform duration-200">
               omo
               <span className="text-accent">.</span>
               tutorial
