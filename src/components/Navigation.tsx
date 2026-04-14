@@ -55,9 +55,6 @@ export default function Navigation() {
             <span className="text-lg font-semibold tracking-tight">
               omo<span className="text-accent">.</span>
             </span>
-            <span className="text-xs text-text-muted group-hover:text-text-secondary transition-colors">
-              {t.hero.subtitle}
-            </span>
           </Link>
 
           <div className="flex items-center gap-1">
