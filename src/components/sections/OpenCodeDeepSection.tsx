@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import { SectionIcon } from "../SectionIcon";
 
 export default function OpenCodeDeepSection() {
   const { t } = useI18n();
@@ -10,7 +11,7 @@ export default function OpenCodeDeepSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">{t.openCodeDeep.icon}</span>
+            <SectionIcon icon={t.openCodeDeep.icon as any} className="w-8 h-8 text-indigo-400" />
             <h2 className="text-3xl font-semibold tracking-tight">
               {t.openCodeDeep.title}
             </h2>
@@ -32,28 +33,28 @@ export default function OpenCodeDeepSection() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">💬</span>
+                <SectionIcon icon="chat" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.openCodeDeep.coreFeatures.chat.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.openCodeDeep.coreFeatures.chat.description}</p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">📁</span>
+                <SectionIcon icon="fileOperations" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.openCodeDeep.coreFeatures.fileOperations.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.openCodeDeep.coreFeatures.fileOperations.description}</p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🖥️</span>
+                <SectionIcon icon="terminal" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.openCodeDeep.coreFeatures.terminal.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.openCodeDeep.coreFeatures.terminal.description}</p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🔌</span>
+                <SectionIcon icon="extensions" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.openCodeDeep.coreFeatures.extensions.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.openCodeDeep.coreFeatures.extensions.description}</p>

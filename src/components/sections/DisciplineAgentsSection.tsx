@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import { SectionIcon } from "../SectionIcon";
 import CodeBlock from "../CodeBlock";
 
 const AGENT_IDS = ["sisyphus", "hephaestus", "prometheus"] as const;
@@ -44,7 +45,7 @@ export default function DisciplineAgentsSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">{t.agents.icon}</span>
+            <SectionIcon icon={t.agents.icon as any} className="w-8 h-8 text-indigo-400" />
             <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
               {t.agents.title} <span className="text-accent">{t.agents.titleAccent}</span>
             </h2>

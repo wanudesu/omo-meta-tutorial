@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import { SectionIcon } from "../SectionIcon";
 import CodeBlock from "../CodeBlock";
 
 const STEP_KEYS = ["start", "work", "persist", "check", "complete"] as const;
@@ -14,7 +15,7 @@ export default function RalphLoopSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">{t.ralphLoop.icon}</span>
+            <SectionIcon icon={t.ralphLoop.icon as any} className="w-8 h-8 text-indigo-400" />
             <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
             {t.ralphLoop.title} <span className="text-accent">{t.ralphLoop.titleAccent}</span>
             </h2>

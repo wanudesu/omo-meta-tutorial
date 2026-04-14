@@ -35,7 +35,7 @@ export const translations = {
     // GETTING STARTED SECTION (NEW)
     // ============================================
     gettingStarted: {
-      icon: "🚀",
+      icon: "gettingStarted",
       title: "Getting Started",
       subtitle: "omo를 설치하고 5분 안에 첫 명령어를 실행해보세요",
 
@@ -93,7 +93,7 @@ ulw 사용자 로그인 기능 추가해줘
     // WHAT IS SECTION (EXPANDED)
     // ============================================
     whatIs: {
-      icon: "📚",
+      icon: "whatIs",
       title: "What is Oh-My-OpenAgent?",
       subtitle: "기능을 보기 전에 먼저 전체 그림부터 가볍게 살펴봅시다",
 
@@ -104,7 +104,7 @@ ulw 사용자 로그인 기능 추가해줘
       },
 
       opencode: {
-        icon: "🔧",
+        icon: "openCodeDeep",
         title: "OpenCode",
         description:
           "코드를 쓰고, 고치고, 이해할 때 도움을 주는 AI 기반 코드 에디터이자 CLI입니다.",
@@ -113,7 +113,7 @@ ulw 사용자 로그인 기능 추가해줘
         feature3: "플러그인과 스킬로 확장 가능",
       },
       omo: {
-        icon: "🚀",
+        icon: "gettingStarted",
         title: "Oh-My-OpenAgent (omo)",
         description:
           "OpenCode에 여러 에이전트를 추가해서 팀처럼 함께 일하게 해주는 플러그인입니다.",
@@ -171,7 +171,7 @@ ulw API에 사용자 인증을 추가해줘
     // OPENCODE DEEP DIVE (NEW)
     // ============================================
     openCodeDeep: {
-      icon: "🔧",
+      icon: "openCodeDeep",
       title: "Deep Dive: OpenCode",
       subtitle: "omo가 올라가는 기반인 OpenCode를 먼저 이해해봅시다",
 
@@ -242,7 +242,7 @@ ulw API에 사용자 인증을 추가해줘
     // OMO DEEP DIVE (NEW)
     // ============================================
     omoDeep: {
-      icon: "🚀",
+      icon: "gettingStarted",
       title: "Deep Dive: omo",
       subtitle: "멀티 에이전트 시스템이 어떻게 움직이는지 알아봅시다",
 
@@ -288,7 +288,7 @@ ulw API에 사용자 인증을 추가해줘
     // QUICK EXAMPLES SECTION (NEW)
     // ============================================
     quickExamples: {
-      icon: "💡",
+      icon: "quickExamples",
       title: "Quick Examples",
       subtitle: "실제 상황에서 omo가 어떻게 쓰이는지 빠르게 살펴보세요",
 
@@ -351,7 +351,7 @@ ulw API에 사용자 인증을 추가해줘
     // ULTRAWORK SECTION (EXPANDED)
     // ============================================
     ultrawork: {
-      icon: "⚡",
+      icon: "ultrawork",
       title: "ultrawork",
       titleSlash: " / ulw",
       subtitle: "에이전트 성능을 최대한 끌어올리는 강한 작업 모드",
@@ -422,7 +422,7 @@ ulw API에 사용자 인증을 추가해줘
     // DISCIPLINE AGENTS SECTION (EXPANDED)
     // ============================================
     agents: {
-      icon: "🤖",
+      icon: "agents",
       title: "Discipline",
       titleAccent: "Agents",
       subtitle: "각자 역할이 있는 에이전트 팀",
@@ -540,7 +540,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // HASH-ANCHORED EDIT SECTION
     // ============================================
     hashAnchor: {
-      icon: "🎯",
+      icon: "hashAnchor",
       title: "Hash-Anchored",
       titleAccent: "Edit",
       description: "필요한 부분을, 필요한 위치에서 정확하게 수정합니다.",
@@ -607,7 +607,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // RALPH LOOP SECTION
     // ============================================
     ralphLoop: {
-      icon: "🔄",
+      icon: "ralphLoop",
       title: "Ralph",
       titleAccent: "Loop",
       description: "작업이 끝날 때까지 스스로 확인하며 계속 도는 루프입니다.",
@@ -666,7 +666,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // COMMAND REFERENCE SECTION (NEW)
     // ============================================
     commands: {
-      icon: "⌨️",
+      icon: "commands",
       title: "Command Reference",
       subtitle: "사용할 수 있는 명령어를 빠르게 확인해보세요",
 
@@ -719,7 +719,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // FAQ SECTION (NEW)
     // ============================================
     faq: {
-      icon: "❓",
+      icon: "faq",
       title: "Frequently Asked Questions",
       subtitle: "처음 쓰는 사람들이 자주 묻는 질문",
 
@@ -755,7 +755,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // TIPS SECTION (NEW)
     // ============================================
     tips: {
-      icon: "✨",
+      icon: "tips",
       title: "Tips & Best Practices",
       subtitle: "omo를 더 잘 쓰는 방법",
 
@@ -834,7 +834,7 @@ ulw JWT 기반 사용자 인증 기능 구현해줘
     // GETTING STARTED SECTION (NEW)
     // ============================================
     gettingStarted: {
-      icon: "🚀",
+      icon: "gettingStarted",
       title: "Getting Started",
       subtitle: "Install omo and run your first command in under 5 minutes",
 
@@ -892,7 +892,7 @@ ulw Add user login functionality
     // WHAT IS SECTION (EXPANDED)
     // ============================================
     whatIs: {
-      icon: "📚",
+      icon: "whatIs",
       title: "What is Oh-My-OpenAgent?",
       subtitle: "Before diving into features, let's understand the big picture",
 
@@ -903,7 +903,7 @@ ulw Add user login functionality
       },
 
       opencode: {
-        icon: "🔧",
+        icon: "openCodeDeep",
         title: "OpenCode",
         description:
           "An AI-powered code editor and CLI that helps you write, fix, and understand code.",
@@ -912,7 +912,7 @@ ulw Add user login functionality
         feature3: "Extensible via plugins and skills",
       },
       omo: {
-        icon: "🚀",
+        icon: "gettingStarted",
         title: "Oh-My-OpenAgent (omo)",
         description:
           "A plugin that adds multiple agents to OpenCode, working together like a team.",
@@ -971,7 +971,7 @@ ulw Add user authentication to the API
     // OPENCODE DEEP DIVE (NEW)
     // ============================================
     openCodeDeep: {
-      icon: "🔧",
+      icon: "openCodeDeep",
       title: "Deep Dive: OpenCode",
       subtitle: "Understanding the foundation that omo builds upon",
 
@@ -1043,7 +1043,7 @@ ulw Add user authentication to the API
     // OMO DEEP DIVE (NEW)
     // ============================================
     omoDeep: {
-      icon: "🚀",
+      icon: "gettingStarted",
       title: "Deep Dive: omo",
       subtitle: "Understanding how the multi-agent system works",
 
@@ -1089,7 +1089,7 @@ ulw Add user authentication to the API
     // QUICK EXAMPLES SECTION (NEW)
     // ============================================
     quickExamples: {
-      icon: "💡",
+      icon: "quickExamples",
       title: "Quick Examples",
       subtitle: "See omo in action with real-world scenarios",
 
@@ -1137,7 +1137,7 @@ ulw Add user authentication to the API
     // ULTRAWORK SECTION (EXPANDED)
     // ============================================
     ultrawork: {
-      icon: "⚡",
+      icon: "ultrawork",
       title: "ultrawork",
       titleSlash: " / ulw",
       subtitle: "High-intensity mode for maximum agent performance",
@@ -1208,7 +1208,7 @@ ulw Add user authentication to the API
     // DISCIPLINE AGENTS SECTION (EXPANDED)
     // ============================================
     agents: {
-      icon: "🤖",
+      icon: "agents",
       title: "Discipline",
       titleAccent: "Agents",
       subtitle: "A team of specialists working together",
@@ -1304,7 +1304,7 @@ ulw Add user authentication to the API
     // HASH-ANCHORED EDIT SECTION
     // ============================================
     hashAnchor: {
-      icon: "🎯",
+      icon: "hashAnchor",
       title: "Hash-Anchored",
       titleAccent: "Edit",
       description: "Edit exactly what you need, exactly where you need it.",
@@ -1371,7 +1371,7 @@ ulw Add user authentication to the API
     // RALPH LOOP SECTION
     // ============================================
     ralphLoop: {
-      icon: "🔄",
+      icon: "ralphLoop",
       title: "Ralph",
       titleAccent: "Loop",
       description:
@@ -1431,7 +1431,7 @@ ulw Add user authentication to the API
     // COMMAND REFERENCE SECTION (NEW)
     // ============================================
     commands: {
-      icon: "⌨️",
+      icon: "commands",
       title: "Command Reference",
       subtitle: "Quick lookup for all available commands",
 
@@ -1493,7 +1493,7 @@ ulw Add user authentication to the API
     // FAQ SECTION (NEW)
     // ============================================
     faq: {
-      icon: "❓",
+      icon: "faq",
       title: "Frequently Asked Questions",
       subtitle: "Common questions from new users",
 
@@ -1529,7 +1529,7 @@ ulw Add user authentication to the API
     // TIPS SECTION (NEW)
     // ============================================
     tips: {
-      icon: "✨",
+      icon: "tips",
       title: "Tips & Best Practices",
       subtitle: "Get the most out of omo",
 

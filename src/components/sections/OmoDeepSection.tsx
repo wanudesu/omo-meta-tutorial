@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import { SectionIcon } from "../SectionIcon";
 
 export default function OmoDeepSection() {
   const { t } = useI18n();
@@ -10,7 +11,7 @@ export default function OmoDeepSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">{t.omoDeep.icon}</span>
+            <SectionIcon icon={t.omoDeep.icon as any} className="w-8 h-8 text-indigo-400" />
             <h2 className="text-3xl font-semibold tracking-tight">
               {t.omoDeep.title}
             </h2>
@@ -32,21 +33,21 @@ export default function OmoDeepSection() {
           <div className="space-y-4">
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-indigo-500/30 transition-colors">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🤖</span>
+                <SectionIcon icon="agentsFeature" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.omoDeep.keyFeatures.agents.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.omoDeep.keyFeatures.agents.description}</p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-indigo-500/30 transition-colors">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">⚡</span>
+                <SectionIcon icon="ultraworkFeature" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.omoDeep.keyFeatures.ultrawork.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.omoDeep.keyFeatures.ultrawork.description}</p>
             </div>
             <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30 hover:border-indigo-500/30 transition-colors">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🔄</span>
+                <SectionIcon icon="ralphLoopFeature" className="w-6 h-6 text-indigo-400" />
                 <h4 className="text-lg font-medium">{t.omoDeep.keyFeatures.ralphLoop.title}</h4>
               </div>
               <p className="text-zinc-400 text-sm">{t.omoDeep.keyFeatures.ralphLoop.description}</p>

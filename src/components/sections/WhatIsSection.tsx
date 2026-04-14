@@ -1,6 +1,7 @@
 "use client";
 
 import { useI18n } from "@/i18n";
+import { SectionIcon } from "../SectionIcon";
 import CodeBlock from "../CodeBlock";
 
 export default function WhatIsSection() {
@@ -11,7 +12,7 @@ export default function WhatIsSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-2xl">{t.whatIs.icon}</span>
+            <SectionIcon icon={t.whatIs.icon as any} className="w-8 h-8 text-indigo-400" />
             <h2 className="text-3xl font-semibold tracking-tight">
               {t.whatIs.title}
             </h2>
@@ -31,7 +32,7 @@ export default function WhatIsSection() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">{t.whatIs.opencode.icon}</span>
+              <SectionIcon icon="openCodeDeep" className="w-7 h-7 text-indigo-400" />
               <h3 className="text-xl font-medium">{t.whatIs.opencode.title}</h3>
             </div>
             <p className="text-zinc-400 mb-4">{t.whatIs.opencode.description}</p>
@@ -53,7 +54,7 @@ export default function WhatIsSection() {
 
           <div className="p-6 rounded-xl border border-indigo-500/30 bg-indigo-500/5">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-3xl">{t.whatIs.omo.icon}</span>
+              <SectionIcon icon="gettingStarted" className="w-7 h-7 text-indigo-400" />
               <h3 className="text-xl font-medium">{t.whatIs.omo.title}</h3>
             </div>
             <p className="text-zinc-400 mb-4">{t.whatIs.omo.description}</p>
