@@ -51,9 +51,12 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur-xl">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="group">
             <span className="text-lg font-semibold tracking-tight">
               omo<span className="text-accent">.</span>
+              <span className="text-text-muted font-normal group-hover:text-text-secondary transition-colors">
+                tutorial
+              </span>
             </span>
           </Link>
 
