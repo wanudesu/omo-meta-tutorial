@@ -9,49 +9,37 @@ import {
   type ReactNode,
 } from "react";
 import { translations, type Language, type TranslationKeys } from "./translations";
+import { setLanguageCookie } from "./cookies";
 
 interface I18nContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: TranslationKeys;
-  mounted: boolean;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 const STORAGE_KEY = "omo-tutorial-lang";
 
-function getInitialLanguage(): Language {
-  if (typeof window === "undefined") return "en";
-  
-  const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
-  if (stored === "ko" || stored === "en") return stored;
-  
-  const browserLang = navigator.language.toLowerCase();
-  if (browserLang.startsWith("ko")) return "ko";
-  
-  return "en";
-}
+export function I18nProvider({
+  children,
+  initialLang,
+}: {
+  children: ReactNode;
+  initialLang: Language;
+}) {
+  const [lang, setLangState] = useState<Language>(initialLang);
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Language>("en");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    const initialLang = getInitialLanguage();
-    setLangState(initialLang);
-    setMounted(true);
-  }, []);
-
-  const setLang = useCallback((newLang: Language) => {
+  const setLang = useCallback(async (newLang: Language) => {
     setLangState(newLang);
     localStorage.setItem(STORAGE_KEY, newLang);
+    await setLanguageCookie(newLang);
   }, []);
 
   const t = translations[lang];
 
   return (
-    <I18nContext.Provider value={{ lang, setLang, t, mounted }}>
+    <I18nContext.Provider value={{ lang, setLang, t }}>
       {children}
     </I18nContext.Provider>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { I18nProvider } from "@/i18n";
+import { getLanguageFromCookie } from "@/i18n/cookies";
 import Navigation from "@/components/Navigation";
 import "./globals.css";
 
@@ -20,15 +21,17 @@ export const metadata: Metadata = {
     "Learn how to use oh-my-openagent features: ultrawork mode, discipline agents, hash-anchored editing, and Ralph Loop.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialLang = await getLanguageFromCookie();
+
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang={initialLang} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <I18nProvider>
+        <I18nProvider initialLang={initialLang}>
           <Navigation />
           <main className="flex-1">{children}</main>
           <footer className="py-8 border-t border-border">
